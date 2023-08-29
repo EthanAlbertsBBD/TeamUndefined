@@ -1,0 +1,55 @@
+{
+	"name": "StartScreenLogo",
+	"plugin-id": "Sprite",
+	"sid": 873444600560721,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1843,
+						"height": 310,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8259389,
+						"collisionPoly": {
+							"points": [
+								0.9641888225718936,
+								0.10967741935483871,
+								0.9278350515463918,
+								0.8870967741935484,
+								0.8572978838849702,
+								0.9032258064516129,
+								0.14487249050461204,
+								0.9032258064516129,
+								0.10309278350515463,
+								0.9,
+								0.026044492674986434,
+								0.864516129032258,
+								0.02224633749321758,
+								0.1032258064516129
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 148451544778879,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

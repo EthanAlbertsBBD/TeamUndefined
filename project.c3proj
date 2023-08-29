@@ -5,10 +5,38 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "0r9txakvrl8",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"StartScreenLogo",
+			"StartButtonText",
+			"TiledBackground",
+			"Keyboard",
+			"Sprite"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -19,13 +47,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Start Screen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Start Screen Events"
 		],
 		"subfolders": []
 	},
@@ -140,7 +170,7 @@
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-integer-scale",
 		"fullscreenQuality": "low",
-		"viewportFit": "auto",
+		"viewportFit": "cover",
 		"backgroundColor": [
 			0,
 			0,

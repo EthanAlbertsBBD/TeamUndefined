@@ -1,0 +1,30 @@
+{
+	"name": "Start Screen Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 893616267385667,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 241208927151655,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 914213458009450
+		}
+	],
+	"sid": 602278058691197
+}
