@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -35,7 +42,10 @@
 			"StartButtonText",
 			"TiledBackground",
 			"Keyboard",
-			"Sprite"
+			"FlickeringPoliceTile",
+			"WonText",
+			"PressEnterButton",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -48,14 +58,16 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"Start Screen"
+			"Start Screen",
+			"Victory Screen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Start Screen Events"
+			"Start Screen Events",
+			"Victory Screen Events"
 		],
 		"subfolders": []
 	},
@@ -65,11 +77,45 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "424306__iam_calderon__exterior-rain.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 890612966972699,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "657652__matrixxx__ghastly-strange-sounds.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 784783600340123,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "262886__lextrack__police-is-close.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 525264183400846,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "317385__satanen__the-killer-is-coming-for-you.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 152599396656565,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
