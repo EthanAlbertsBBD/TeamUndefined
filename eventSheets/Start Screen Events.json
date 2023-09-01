@@ -24,6 +24,55 @@
 				}
 			],
 			"sid": 914213458009450
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 149828395399502
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 318546294753743,
+					"parameters": {
+						"audio-file": "424306__iam_calderon__exterior-rain",
+						"loop": "looping",
+						"volume": "-15",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 685732184122318,
+					"parameters": {
+						"audio-file": "657652__matrixxx__ghastly-strange-sounds",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 111315268605640,
+					"parameters": {
+						"audio-file": "262886__lextrack__police-is-close",
+						"loop": "looping",
+						"volume": "-8",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 445467219304474
 		}
 	],
 	"sid": 602278058691197
