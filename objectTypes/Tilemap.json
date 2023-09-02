@@ -1,0 +1,21 @@
+{
+	"name": "Tilemap",
+	"plugin-id": "Tilemap",
+	"sid": 619969237919226,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 92,
+		"height": 34,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 4212725,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}
