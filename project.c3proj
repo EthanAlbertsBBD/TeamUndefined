@@ -43,6 +43,27 @@
 		},
 		{
 			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -110,7 +131,9 @@
 			"Clock",
 			"Sprite2",
 			"Sprite3",
-			"Audio"
+			"Audio",
+			"Cop_1",
+			"Player"
 		],
 		"subfolders": []
 	},
@@ -163,6 +186,30 @@
 					"name": "262886__lextrack__police-is-close.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 786287764099686,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "game-over.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 287765298286412,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "win-the-game.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 695393831852488,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "item-pickup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 377897280639251,
 					"file-info": {
 						"purpose": "none"
 					}
