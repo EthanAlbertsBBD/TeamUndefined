@@ -3,13 +3,23 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "TimeSinceGameStart",
+			"name": "TimeAtGameStart",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 234234712139601
+		},
+		{
+			"eventType": "variable",
+			"name": "won",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 606476924498963
 		},
 		{
 			"eventType": "block",
@@ -26,7 +36,7 @@
 					"objectClass": "System",
 					"sid": 390687989318091,
 					"parameters": {
-						"variable": "TimeSinceGameStart",
+						"variable": "TimeAtGameStart",
 						"value": "time"
 					}
 				}
@@ -135,9 +145,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 413297008494903,
+					"sid": 435853710183178,
 					"parameters": {
-						"layout": "Victory Sreen"
+						"layout": "Lose Screen"
 					}
 				}
 			],
@@ -149,11 +159,19 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 127638528192522,
+					"sid": 424609667308415,
 					"parameters": {
-						"first-value": "time - TimeSinceGameStart",
+						"first-value": "time - TimeAtGameStart",
 						"comparison": 4,
-						"second-value": "10"
+						"second-value": "50"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 949145731869014,
+					"parameters": {
+						"variable": "won"
 					}
 				}
 			],
@@ -161,9 +179,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 756933168811113,
+					"sid": 181539894512904,
 					"parameters": {
-						"audio-file": "game-over",
+						"audio-file": "win-the-game",
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",
@@ -173,7 +191,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 492317147309748,
+					"sid": 975776187339944,
 					"parameters": {
 						"layout": "Victory Sreen"
 					}
@@ -187,11 +205,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 230869361893310,
+					"sid": 111560148478403,
 					"parameters": {
-						"first-value": "time - TimeSinceGameStart",
+						"first-value": "time - TimeAtGameStart",
 						"comparison": 4,
-						"second-value": "11"
+						"second-value": "51"
 					}
 				}
 			],
@@ -199,9 +217,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 934795505232694,
+					"sid": 386858849196815,
 					"parameters": {
-						"audio-file": "win-the-game",
+						"audio-file": "game-over",
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",
@@ -211,13 +229,205 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 761926250427547,
+					"sid": 825317140190993,
 					"parameters": {
-						"layout": "Victory Sreen"
+						"layout": "Lose Screen"
 					}
 				}
 			],
-			"sid": 967854737465758
+			"sid": 931678851181314
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-visible",
+					"objectClass": "machete",
+					"sid": 198679901753819
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "pot",
+					"sid": 450155067465633
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "gun",
+					"sid": 482378900090710
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "dumbbell",
+					"sid": 227017295798736
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 610297751531001,
+					"parameters": {
+						"variable": "won",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 269244265382763,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 205420128221495
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 598930953543777,
+					"parameters": {
+						"variable": "won",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 494391001461217
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "machete",
+					"sid": 829006765212987,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 540569801498959,
+					"parameters": {
+						"audio-file": "item-pickup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "machete",
+					"sid": 292388858833527
+				}
+			],
+			"sid": 457675237151491
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "pot",
+					"sid": 761806467699907,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 996568055598541,
+					"parameters": {
+						"audio-file": "item-pickup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "pot",
+					"sid": 166987314142502
+				}
+			],
+			"sid": 705082343242548
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "gun",
+					"sid": 433689840626248,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 448556384253098,
+					"parameters": {
+						"audio-file": "item-pickup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "gun",
+					"sid": 653551418928936
+				}
+			],
+			"sid": 111845013777039
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "dumbbell",
+					"sid": 827329364768181,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 680330539759310,
+					"parameters": {
+						"audio-file": "item-pickup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "dumbbell",
+					"sid": 457480311743869
+				}
+			],
+			"sid": 873648809782450
 		}
 	],
 	"sid": 686544442825114

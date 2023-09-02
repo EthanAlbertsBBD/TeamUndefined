@@ -1,5 +1,30 @@
 {
 	"name": "Lose Screen Events",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 541404243696081,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 812225267271643,
+					"parameters": {
+						"layout": "Start Screen"
+					}
+				}
+			],
+			"sid": 813541291157755
+		}
+	],
 	"sid": 232522155194723
 }

@@ -1,7 +1,7 @@
 {
-	"name": "pot",
+	"name": "gun",
 	"plugin-id": "Sprite",
-	"sid": 176985697705572,
+	"sid": 109968880678575,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 31,
-						"height": 34,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 84,
+						"height": 51,
+						"originX": 0.4642857142857143,
+						"originY": 0.4803921568627451,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4855812,
+						"imageSpriteId": 716343,
+						"collisionPoly": {
+							"points": [
+								0.11309523809523814,
+								0.23529411764705882,
+								1,
+								0,
+								0.8452380952380955,
+								0.8431372549019609,
+								0,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 522314849871262,
-				"name": "Default",
+				"sid": 533135905278289,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

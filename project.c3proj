@@ -141,7 +141,10 @@
 			"Audio",
 			"Cop_1",
 			"Player",
-			"Sprite4"
+			"Sprite4",
+			"machete",
+			"gun",
+			"dumbbell"
 		],
 		"subfolders": []
 	},
