@@ -1,0 +1,30 @@
+{
+	"name": "Victory Screen Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 695730416845110,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 378308112912952,
+					"parameters": {
+						"layout": "Start Screen"
+					}
+				}
+			],
+			"sid": 466707845766205
+		}
+	],
+	"sid": 985157910443202
+}

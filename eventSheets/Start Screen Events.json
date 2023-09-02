@@ -19,11 +19,60 @@
 					"objectClass": "System",
 					"sid": 241208927151655,
 					"parameters": {
-						"layout": "Layout 1"
+						"layout": "House"
 					}
 				}
 			],
 			"sid": 914213458009450
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 469262367701141
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 275735255205798,
+					"parameters": {
+						"audio-file": "262886__lextrack__police-is-close",
+						"loop": "looping",
+						"volume": "-15",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 113482012341478,
+					"parameters": {
+						"audio-file": "657652__matrixxx__ghastly-strange-sounds",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 695962735517755,
+					"parameters": {
+						"audio-file": "424306__iam_calderon__exterior-rain",
+						"loop": "not-looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 401141147025746
 		}
 	],
 	"sid": 602278058691197
