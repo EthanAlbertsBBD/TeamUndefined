@@ -46,7 +46,7 @@
 					}
 				},
 				{
-					"type": "FlickeringPoliceTile",
+					"type": "Sprite",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Police Light Animation",
