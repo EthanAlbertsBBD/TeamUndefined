@@ -205,11 +205,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 111560148478403,
+					"sid": 498603010602863,
 					"parameters": {
 						"first-value": "time - TimeAtGameStart",
 						"comparison": 4,
-						"second-value": "51"
+						"second-value": "51.5"
 					}
 				}
 			],
@@ -428,6 +428,30 @@
 				}
 			],
 			"sid": 873648809782450
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 338374177037511,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TimeText",
+					"sid": 832313661313054,
+					"parameters": {
+						"text": "round(50-(time - TimeAtGameStart))&\"sec\""
+					}
+				}
+			],
+			"sid": 160053270487206
 		}
 	],
 	"sid": 686544442825114
