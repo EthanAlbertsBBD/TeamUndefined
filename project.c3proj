@@ -140,7 +140,8 @@
 			"Sprite3",
 			"Audio",
 			"Cop_1",
-			"Player"
+			"Player",
+			"Sprite4"
 		],
 		"subfolders": []
 	},
@@ -154,7 +155,8 @@
 		"items": [
 			"House",
 			"Start Screen",
-			"Victory Sreen"
+			"Victory Sreen",
+			"Lose Screen"
 		],
 		"subfolders": []
 	},
@@ -162,7 +164,8 @@
 		"items": [
 			"House Events",
 			"Start Screen Events",
-			"Victory Screen Events"
+			"Victory Screen Events",
+			"Lose Screen Events"
 		],
 		"subfolders": []
 	},
