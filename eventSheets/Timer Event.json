@@ -1,0 +1,139 @@
+{
+	"name": "Timer Event",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "currentTime",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 291383507124868
+		},
+		{
+			"eventType": "variable",
+			"name": "countDownAmount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 653250719979732
+		},
+		{
+			"eventType": "variable",
+			"name": "timer",
+			"type": "string",
+			"initialValue": "Time Left: ",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 290569736411212
+		},
+		{
+			"eventType": "variable",
+			"name": "initialTimeInSec",
+			"type": "number",
+			"initialValue": "120",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 351037737344327
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 652807749811299
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 286601017813245,
+					"parameters": {
+						"variable": "currentTime",
+						"value": "floor(unixtime / 1000)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Timer",
+					"sid": 317832704181399,
+					"parameters": {
+						"text": "timer & floor((countDownAmount- currentTime)/ 60) & \":\" & floor((countDownAmount- currentTime)% 60)"
+					}
+				}
+			],
+			"sid": 817473305497234,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 293364553818128,
+							"parameters": {
+								"variable": "countDownAmount",
+								"comparison": 2,
+								"value": "currentTime"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Timer",
+							"sid": 334215718842178,
+							"parameters": {
+								"text": "timer & floor(initialTimeInSec/ 60) & \":\" & floor(initialTimeInSec % 60)"
+							}
+						}
+					],
+					"sid": 694584102234931
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 735456578787962,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 295373325432489,
+					"parameters": {
+						"variable": "countDownAmount",
+						"value": "currentTime"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 511348210770045,
+					"parameters": {
+						"variable": "countDownAmount",
+						"value": "initialTimeInSec"
+					}
+				}
+			],
+			"sid": 758770025496724
+		}
+	],
+	"sid": 629858691136574
+}
