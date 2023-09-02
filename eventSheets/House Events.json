@@ -1,5 +1,224 @@
 {
 	"name": "House Events",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "TimeSinceGameStart",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 234234712139601
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 160958594146589
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 390687989318091,
+					"parameters": {
+						"variable": "TimeSinceGameStart",
+						"value": "time"
+					}
+				}
+			],
+			"sid": 766318770552412
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Cop_1",
+					"sid": 412488571499282,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "73"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Cop_1",
+					"sid": 910817509283979,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "1840",
+						"y": "495",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Cop_1",
+					"sid": 499007449285645,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 848229665907383
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Cop_1",
+					"sid": 445521417203701,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "1840"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Cop_1",
+					"sid": 415175379715927,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "73",
+						"y": "495",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Cop_1",
+					"sid": 407396364600141,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 350774653772446
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "Cop_1",
+					"sid": 438254245399533,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 334903966253719,
+					"parameters": {
+						"audio-file": "game-over",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 413297008494903,
+					"parameters": {
+						"layout": "Victory Sreen"
+					}
+				}
+			],
+			"sid": 629234351312191
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 127638528192522,
+					"parameters": {
+						"first-value": "time - TimeSinceGameStart",
+						"comparison": 4,
+						"second-value": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 756933168811113,
+					"parameters": {
+						"audio-file": "game-over",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 492317147309748,
+					"parameters": {
+						"layout": "Victory Sreen"
+					}
+				}
+			],
+			"sid": 804716964113339
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 230869361893310,
+					"parameters": {
+						"first-value": "time - TimeSinceGameStart",
+						"comparison": 4,
+						"second-value": "11"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 934795505232694,
+					"parameters": {
+						"audio-file": "win-the-game",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 761926250427547,
+					"parameters": {
+						"layout": "Victory Sreen"
+					}
+				}
+			],
+			"sid": 967854737465758
+		}
+	],
 	"sid": 686544442825114
 }
