@@ -1,0 +1,49 @@
+{
+	"name": "dumbbell",
+	"plugin-id": "Sprite",
+	"sid": 437999822110976,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 283,
+						"height": 136,
+						"originX": 0.5017667844522968,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2438218,
+						"collisionPoly": {
+							"points": [
+								0.06537102473498206,
+								0.16911764705882396,
+								0.9328621908127206,
+								0.1654411764705897,
+								0.9310954063604236,
+								0.8382352941176476,
+								0.0653710247349822,
+								0.8308823529411763
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 275370282905527,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

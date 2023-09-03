@@ -1,36 +1,42 @@
 {
-	"name": "WhiteWall2",
+	"name": "machete",
 	"plugin-id": "Sprite",
-	"sid": 340452339529511,
+	"sid": 273997383809633,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 982085605825873
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 98,
-						"height": 12,
-						"originX": 0.5,
+						"width": 48,
+						"height": 317,
+						"originX": 0.5208333333333334,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5907140,
+						"imageSpriteId": 6866627,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.0031545741324921135,
+								1,
+								0.0031545741324921135,
+								1,
+								0.9968454258675079,
+								0,
+								0.9968454258675079
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 222827643734731,
-				"name": "Default",
+				"sid": 915072901324694,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
