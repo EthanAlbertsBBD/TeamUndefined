@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -153,7 +160,13 @@
 			"gun",
 			"dumbbell",
 			"TimeLeft",
-			"TimeText"
+			"TimeText",
+			"PoliceRuningLights",
+			"Sprite6",
+			"SpriteFont",
+			"Lights1",
+			"Sprite5",
+			"Sprite7"
 		],
 		"subfolders": []
 	},
@@ -168,7 +181,8 @@
 			"House",
 			"Start Screen",
 			"Victory Sreen",
-			"Lose Screen"
+			"Lose Screen",
+			"How to play Screen"
 		],
 		"subfolders": []
 	},
@@ -177,7 +191,8 @@
 			"House Events",
 			"Start Screen Events",
 			"Victory Screen Events",
-			"Lose Screen Events"
+			"Lose Screen Events",
+			"How to play Events"
 		],
 		"subfolders": []
 	},
