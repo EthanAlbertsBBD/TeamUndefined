@@ -1,0 +1,30 @@
+{
+	"name": "How to play Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 251651752291568,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 220514991660562,
+					"parameters": {
+						"layout": "Start Screen"
+					}
+				}
+			],
+			"sid": 700609419303587
+		}
+	],
+	"sid": 791471593808613
+}
